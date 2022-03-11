@@ -6,7 +6,7 @@
 /*   By: mhaddi <mhaddi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 18:44:14 by mhaddi            #+#    #+#             */
-/*   Updated: 2022/03/10 19:43:50 by mhaddi           ###   ########.fr       */
+/*   Updated: 2022/03/11 05:42:02 by mhaddi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,9 +122,9 @@ unsigned int ClapTrap::getAttackDamage(void) const
 
 void ClapTrap::setName(std::string name)
 {
-	this->_name = name;
 	std::cout	<< this->_name
 				<< " name changed to " << name << std::endl;
+	this->_name = name;
 }
 
 void ClapTrap::setHitPoints(unsigned int hitPoints)

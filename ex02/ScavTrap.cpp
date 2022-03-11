@@ -6,7 +6,7 @@
 /*   By: mhaddi <mhaddi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 18:44:14 by mhaddi            #+#    #+#             */
-/*   Updated: 2022/03/11 05:31:24 by mhaddi           ###   ########.fr       */
+/*   Updated: 2022/03/11 05:13:59 by mhaddi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void ScavTrap::guardGate()
 
 ScavTrap & ScavTrap::operator=(const ScavTrap & rhs)
 {
-	std::cout << "ScavTrap assignment operator called" << std::endl;
+	std::cout << "ClapTrap assignment operator called" << std::endl;
 	if (this != &rhs)
 	{
 		this->_name = rhs._name;
