@@ -6,7 +6,7 @@
 /*   By: mhaddi <mhaddi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 18:36:31 by mhaddi            #+#    #+#             */
-/*   Updated: 2022/03/11 05:06:57 by mhaddi           ###   ########.fr       */
+/*   Updated: 2022/03/11 05:07:08 by mhaddi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class ClapTrap
 {
 
-	private:
+	protected:
 
 		std::string _name;
 		unsigned int _hitPoints;
