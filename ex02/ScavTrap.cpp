@@ -47,32 +47,9 @@ ScavTrap::~ScavTrap(void)
 	return ;
 }
 
-void ScavTrap::attack(std::string const & target)
-{
-	if (this->_energyPoints > 0)
-	{
-		this->_energyPoints -= (this->_energyPoints > 0);
-		std::cout	<< "The ScavTrap "
-					<< this->_name
-					<< " attacks " << target
-					<< ", causing " << this->_attackDamage
-					<< " points of damage!" << std::endl;
-	}
-	else
-		std::cout	<< this->_name
-					<< " is out of energy!" << std::endl;
-}
-
-void ScavTrap::guardGate()
-{
-	std::cout	<< this->_name
-				<< " is now in Gate keeper mode."
-				<< std::endl;
-}
-
 ScavTrap & ScavTrap::operator=(const ScavTrap & rhs)
 {
-	std::cout << "ClapTrap assignment operator called" << std::endl;
+	std::cout << "ScavTrap assignment operator called" << std::endl;
 	if (this != &rhs)
 	{
 		this->_name = rhs._name;
@@ -81,6 +58,28 @@ ScavTrap & ScavTrap::operator=(const ScavTrap & rhs)
 		this->_attackDamage = rhs._attackDamage;
 	}
 	return (*this);
+}
+
+void ScavTrap::attack(std::string const & target)
+{
+	if (this->_energyPoints > 0)
+	{
+		this->_energyPoints -= 1;
+		std::cout	<< this->_name
+					<< " hits " << target
+					<< ", causing " << this->_attackDamage
+					<< " points of damage!" << std::endl;
+	}
+	else
+		std::cout	<< this->_name
+					<< " has no energy left!" << std::endl;
+}
+
+void ScavTrap::guardGate()
+{
+	std::cout	<< this->_name
+				<< " is now in Gate keeper mode."
+				<< std::endl;
 }
 
 #endif

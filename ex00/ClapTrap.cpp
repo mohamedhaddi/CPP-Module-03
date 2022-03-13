@@ -64,7 +64,7 @@ void ClapTrap::attack(std::string const & target)
 {
 	if (this->_energyPoints > 0)
 	{
-		this->_energyPoints -= (this->_energyPoints > 0);
+		this->_energyPoints -= 1;
 		std::cout	<< this->_name
 					<< " attacks " << target
 					<< ", causing " << this->_attackDamage

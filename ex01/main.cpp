@@ -18,21 +18,19 @@ int main(void)
 {
 	ClapTrap foo("foo");
 	ScavTrap bar("bar");
-	
-	foo.setAttackDamage(7);
+
+	bar.attack(foo.getName());
+	foo.takeDamage(bar.getAttackDamage());
 
 	std::cout << std::endl << foo << bar << std::endl;
 
-	foo.attack(bar.getName());
-	bar.takeDamage(foo.getAttackDamage());
-
-	std::cout << std::endl << foo << bar << std::endl;
-
-	bar.beRepaired(5);
+	foo.beRepaired(5);
 
 	std::cout << std::endl << foo << bar << std::endl;
 
 	bar.guardGate();
+
+	std::cout << std::endl;
 
 	return (0);
 }

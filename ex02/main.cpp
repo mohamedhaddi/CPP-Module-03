@@ -36,8 +36,9 @@ int main(void)
 	std::cout << std::endl << foo << bar << std::endl;
 
 	bar.guardGate();
-
 	baz.highFivesGuys();
+
+	std::cout << std::endl;
 
 	return (0);
 }
